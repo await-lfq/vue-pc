@@ -1,0 +1,1 @@
+export  const env="/lfq"; //开发环境

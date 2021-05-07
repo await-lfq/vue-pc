@@ -1,0 +1,14 @@
+module.exports={
+  devServer:{
+    open:true,
+    proxy:{
+      "/lfq":{
+        target:"https://event.kongquechao.com",
+        changeOrigin:true,
+        pathRewrite:{
+          "^/lfq":"/"
+        }
+      }
+    }
+  }
+}
