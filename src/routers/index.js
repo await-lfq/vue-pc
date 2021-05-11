@@ -32,6 +32,11 @@ let router = new VueRouter({
       name:"waterfallsLayout",
       path:"/waterfallsLayout",
       component(){return import("../views/waterfallsLayout")}
+    },
+    {
+      name:"scrollLoading",
+      path:"/scrollLoading",
+      component(){return import("../views/scrollLoading")}
     }
   ]
 });
