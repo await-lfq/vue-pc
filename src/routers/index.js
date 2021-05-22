@@ -3,40 +3,58 @@ import VueRouter from "vue-router";
 Vue.use(VueRouter);
 let router = new VueRouter({
   mode: "history",
-  routes: [
-    {
+  routes: [{
       path: "/",
       redirect: "/md5File"
     },
     {
       name: "md5File",
       path: "/md5File",
-      component() { return import("../views/md5") }
+      component() {
+        return import("../views/md5")
+      }
     },
     {
       name: "robot",
       path: "/robot",
-      component() { return import("../views/robot") }
+      component() {
+        return import("../views/robot")
+      }
     },
     {
-      name:"upload",
-      path:"/upload",
-      component(){return import("../views/upload")}
+      name: "upload",
+      path: "/upload",
+      component() {
+        return import("../views/upload")
+      }
     },
     {
-      name:"geyVerifyCode",
-      path:"/geyVerifyCode",
-      component(){return import("../views/geyVerifyCode")}
+      name: "geyVerifyCode",
+      path: "/geyVerifyCode",
+      component() {
+        return import("../views/geyVerifyCode")
+      }
     },
     {
-      name:"waterfallsLayout",
-      path:"/waterfallsLayout",
-      component(){return import("../views/waterfallsLayout")}
+      name: "waterfallsLayout",
+      path: "/waterfallsLayout",
+      component() {
+        return import("../views/waterfallsLayout")
+      }
     },
     {
-      name:"scrollLoading",
-      path:"/scrollLoading",
-      component(){return import("../views/scrollLoading")}
+      name: "scrollLoading",
+      path: "/scrollLoading",
+      component() {
+        return import("../views/scrollLoading")
+      }
+    },
+    {
+      name: "lazyLoading",
+      path: "/lazyLoading",
+      component() {
+        return import("../views/lazyLoading")
+      }
     }
   ]
 });
