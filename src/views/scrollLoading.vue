@@ -36,16 +36,17 @@ export default {
      *
      */
     scrollLoading() {
+      // 在元素里面滚动时(当在window下面滚动时需用html元素，不能用body元素，有兼容性)
       this.$refs.box1.onscroll = () => {
-        if (
-          this.$refs.box1.scrollHeight - this.$refs.box1.scrollTop ===
-          this.$refs.box1.clientHeight
+        if ( 
+          Math.ceil(this.$refs.box1.clientHeight + this.$refs.box1.scrollTop) >=
+          this.$refs.box1.scrollHeight
         ) {
           console.log("触发了");
           this.page++;
           if (this.page > 5) {
             this.text = "没有数据了......";
-            this.$refs.box1.onscroll = null;  // 当数据全部加载完之后就清掉滚动事件
+            this.$refs.box1.onscroll = null; // 当数据全部加载完之后就清掉滚动事件
             return;
           }
           this.$refs.box1.onscrol = null; // 当下拉底部时，发请求加载下一页数据，就要把滚动事件清掉
