@@ -1,61 +1,110 @@
 <template>
   <div class="scroll-loading">
-    <!-- <div class="box1" ref="box1">
-      <div style="height:500px;background:yellow">1</div>
-      <div style="height:500px;background:yellow">2</div>
-      <div style="height:500px;background:yellow">3</div>
-      <div style="height:500px;background:yellow">4</div>
-    </div>  -->
-    <div style="height:500px;background:yellow">1</div>
-    <div style="height:500px;background:yellow">2</div>
-    <div style="height:500px;background:yellow">3</div>
-    <div style="height:500px;background:yellow">4</div>
+    <div class="box1" ref="box1">
+      <div class="item" v-for="(item,index) of dataList" :key="index">
+        {{item.showInfo}}
+      </div>
+      <div v-if="isShow" class="loading">{{text}}</div>
+    </div>
   </div>
 </template>
 
 <script>
-  export default {
-    data() {
-      return {
+import { get } from "../utils/request";
+import { moreComingList } from "../utils/api";
 
+export default {
+  data() {
+    return {
+      // 列表数据
+      dataList: [],
+      // 滚动到底部显示的文字
+      text: "加载中......",
+      // 页面数
+      page: 1,
+      // 是否显示
+      isShow: true,
+    };
+  },
+  mounted() {
+    // 列表数据
+    this.getMoreComingList(1);
+  },
+  methods: {
+    /**
+     * @description 滚动加载数据
+     *
+     */
+    scrollLoading() {
+      this.$refs.box1.onscroll = () => {
+        if (
+          this.$refs.box1.scrollHeight - this.$refs.box1.scrollTop ===
+          this.$refs.box1.clientHeight
+        ) {
+          console.log("触发了");
+          this.page++;
+          if (this.page > 5) {
+            this.text = "没有数据了......";
+            this.$refs.box1.onscroll = null;  // 当数据全部加载完之后就清掉滚动事件
+            return;
+          }
+          this.$refs.box1.onscrol = null; // 当下拉底部时，发请求加载下一页数据，就要把滚动事件清掉
+          this.getMoreComingList(this.page);
+        }
+      };
+    },
+    /**
+     * @description 获取列表数据
+     * @method getMoreComingList
+     * @params {number} 页数
+     */
+    async getMoreComingList(page) {
+      this.$refs.box1.onscroll = null;
+      try {
+        let res = await get(moreComingList, {
+          token: "",
+          movieIds:
+            "1299178,1250964,1302134,1241385,1383416,1221,1284360,1211382,1339160,632158",
+          optimus_uuid:
+            "DB94DB10B97511EBB67EA7C1FD852734A56AADAFB9154B36A1AB4DB636DEBA67",
+          optimus_risk_level: 71,
+          optimus_code: page,
+        });
+        if (page == 1) {
+          this.dataList.push(...res.coming);
+          this.scrollLoading(); // 数据到来时，监听页面滚动
+        } else {
+          setTimeout(() => {
+            this.dataList.push(...res.coming);
+            this.scrollLoading(); //数据到来时，监听页面的滚动
+          }, 2000);
+        }
+      } catch (error) {
+        alert(error);
       }
     },
-    mounted() {
-      // 元素滚动
-      // this.$refs.box1.addEventListener("scroll", () => {
-      //   if ((this.$refs.box1.scrollHeight - this.$refs.box1.scrollTop) === this.$refs.box1.clientHeight) {
-      //     console.log("触发了"); // 可以发请求，加载数据
-      //   }
-      // })
-      // body滚动
-
-      window.addEventListener("scroll", () => {
-        //变量scrollTop是滚动条滚动时，距离顶部的距离
-        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-        //变量windowHeight是可视区的高度
-        var windowHeight = document.documentElement.clientHeight || document.body.clientHeight;
-        //变量scrollHeight是滚动条的总高度
-        var scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
-        console.log(scrollTop,windowHeight,scrollHeight);
-        //滚动条到底部的条件
-        if (Math.round(scrollTop + windowHeight) == scrollHeight) {
-          //到了这个就可以进行业务逻辑加载后台数据了
-          console.log("到了底部");
-        }
-      })
-    }
-  }
+  },
+};
 </script>
 
 <style lang="scss" scoped>
-  // 方式1
-  .method {
+// 方式1
+.box1 {
+  height: 500px;
+  background-color: red;
+  overflow: auto;
+  .item {
+    height: 100px;
+    font-size: 20px;
+    color: #ccc;
     text-align: center;
+    line-height: 100px;
+    background: #000;
+    border-bottom: 2px solid #ccc;
   }
-
-  .box1 {
-    height: 300px;
-    background-color: red;
-    overflow: auto;
+  .loading {
+    text-align: center;
+    line-height: 100px;
   }
+}
 </style>
