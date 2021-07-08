@@ -125,8 +125,10 @@ export default {
     lazy(h, imgs) {
       let s = document.documentElement.scrollTop; // 滚动的距离
       for (let i = 0, len = imgs.length; i < len; i++) {
-        if (h + s > imgs[i].offsetTop) {   // 图片出现在可视区域时，显示图片
-          setTimeout(() => { //   // 图片过一段时间再显示
+        if (h + s > imgs[i].offsetTop) {
+          // 图片出现在可视区域时，显示图片
+          setTimeout(() => {
+            //   // 图片过一段时间再显示
             imgs[i].children[0].src = imgs[i].children[0].dataset.src;
           }, 1000);
         }

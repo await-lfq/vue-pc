@@ -5,7 +5,9 @@ let router = new VueRouter({
   mode: "history",
   routes: [{
       path: "/",
-      redirect: "/md5File"
+      redirect(){
+        return {name:"nativeUpload"}
+      }
     },
     {
       name: "md5File",
@@ -54,6 +56,13 @@ let router = new VueRouter({
       path: "/lazyLoading",
       component() {
         return import("../views/lazyLoading")
+      }
+    },
+    {
+      name:"nativeUpload",
+      path:"/nativeUpload",
+      component(){
+        return import("../views/nativeUpload");
       }
     }
   ]
