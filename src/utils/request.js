@@ -9,7 +9,7 @@ export function post(url, params = {}) {
     axios.post(url, params).then(res => {
       resolve(res.data);
     }).catch(err => {
-      reject("服务器出错")
+      reject("请求失败")
     })
   })
 }

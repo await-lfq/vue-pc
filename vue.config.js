@@ -1,4 +1,5 @@
 module.exports={
+  // 开发环境，跨域请求
   devServer:{
     open:true,
     proxy:{

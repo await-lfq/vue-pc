@@ -1,5 +1,6 @@
 <template>
   <div class="navite-upload">
+    <!--单张图片 -->
     <div class="single-upload">
       <h3>单文件上传</h3>
       <div>
@@ -10,11 +11,12 @@
           </div>
         </div>
         <div class="upload-box" @drop="function(){}" @dragenter="function(){}" @dragleave="function(){}" @dragover="function(){}">
-          <input @change="handlerChange" class="file-input" type="file">
+          <input multiple accept="image/*" @change="handlerChange" class="file-input" type="file">
           <i class="upload-icon"></i>
         </div>
       </div>
     </div>
+    <!-- 多图片上传 -->
   </div>
 </template>
 
@@ -28,18 +30,19 @@ export default {
       thumbnail: [],
       // 需要上传的图片
       uploadFile: [],
-      // key值
+      // 一个标识key
       key: 0,
     };
   },
   mounted() {
     setInterval(async () => {
       if (this.uploadFile.length > 0) {
-        let fileObj = this.uploadFile.shift(); // 取数组里面的第一个元素进行上传
+        // 取数组前面的第一个任务进行上传
+        let fileObj = this.uploadFile.shift(); 
         // 用FormData对象上传
         let formData = new FormData();
         formData.append("image", fileObj.file);
-        formData.append("token", "uysGNriHm6U1iNpw1");
+        formData.append("token", "TF7WN8fxDJQ4NjJ61484");
         formData.append("status", 1);
         // 调用上传接口
         await post(uploadImg, formData);
@@ -55,10 +58,12 @@ export default {
      * @param {Event事件对象} e
      */
     handlerChange(e) {
+      console.log(e,"事件对象");
+      // 一个标识key
       this.key++;
-      console.log(this.key);
-      localStorage.setItem("key", this.key);
+      // 上传的图片
       let file = e.target.files[0];
+      // 获取缩略图
       var reader = new FileReader();
       reader.readAsDataURL(file);
       reader.onloadend = () => {
@@ -66,14 +71,15 @@ export default {
           imgUrl: reader.result,
           file,
           isUpload: false,
-          key: localStorage.getItem("key"),
-        }); // 缩略图
+          key:this.key,
+        });
+        // 上传的图片
         this.uploadFile.push({
           imgUrl: reader.result,
           file,
           isUpload: false,
-          key: localStorage.getItem("key"),
-        }); // 上传的图片
+          key:this.key,
+        });
       };
       // 上传同个文件触发change事件
       e.target.value = "";
