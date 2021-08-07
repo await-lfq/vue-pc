@@ -12,9 +12,8 @@
 <script>
 import { get } from "../utils/request";
 import { moreComingList } from "../utils/api";
-
 export default {
-  data() {
+  data () {
     return {
       // 列表数据
       dataList: [],
@@ -26,7 +25,7 @@ export default {
       isShow: true,
     };
   },
-  mounted() {
+  mounted () {
     // 列表数据
     this.getMoreComingList(1);
   },
@@ -35,14 +34,13 @@ export default {
      * @description 滚动加载数据
      *
      */
-    scrollLoading() {
+    scrollLoading () {
       // 在元素里面滚动时(当在window下面滚动时需用html元素，不能用body元素，有兼容性)
       this.$refs.box1.onscroll = () => {
-        if ( 
+        if (
           Math.ceil(this.$refs.box1.clientHeight + this.$refs.box1.scrollTop) >=
           this.$refs.box1.scrollHeight
         ) {
-          console.log("触发了");
           this.page++;
           if (this.page > 5) {
             this.text = "没有数据了......";
@@ -59,7 +57,7 @@ export default {
      * @method getMoreComingList
      * @params {number} 页数
      */
-    async getMoreComingList(page) {
+    async getMoreComingList (page) {
       this.$refs.box1.onscroll = null;
       try {
         let res = await get(moreComingList, {
@@ -81,7 +79,8 @@ export default {
           }, 2000);
         }
       } catch (error) {
-        alert(error);
+        console.log("请求失败");
+        throw error;
       }
     },
   },

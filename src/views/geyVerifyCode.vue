@@ -7,7 +7,6 @@
 
 <script>
   import {get} from "../utils/request";
-  
   import {
    verifyCode
   } from "../utils/api";
@@ -35,7 +34,8 @@
           }).then(res => {
             console.log(res, "结果");
           }).catch(err => {
-            alert(err)
+            console.log("请求失败");
+            throw err;
           })
           let time = 60;
           let interval = setInterval(() => {

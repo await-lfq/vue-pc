@@ -152,7 +152,8 @@
           }).then(res => {
             resolve(res);
           }).catch(err => {
-            this.$toast("请求阿里失败")
+            this.$toast("请求阿里失败");
+            throw err;
           })
         })
 
