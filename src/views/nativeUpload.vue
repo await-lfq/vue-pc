@@ -1,6 +1,6 @@
 <template>
   <div class="navite-upload">
-    <!-- <div class="upload">
+    <div class="upload">
       <div>
         <div class="img-container" v-show="thumbnail.length>0" v-for="(item,index) in thumbnail" :key="index">
           <img class="img" :src="item.imgUrl" alt="">
@@ -13,7 +13,7 @@
           <i class="upload-icon"></i>
         </div>
       </div>
-    </div> -->
+    </div>
   </div>
 </template>
 
@@ -32,26 +32,23 @@ export default {
     };
   },
   created(){
-    post(registry,{phone:"15797800251",password:"123456"}).then(res=>{
-      console.log(res);
-    })
   },
   mounted() {
-    // setInterval(async () => {
-    //   if (this.uploadFile.length > 0) {
-    //     // 取数组前面的第一个任务进行上传
-    //     let fileObj = this.uploadFile.shift(); 
-    //     // 用FormData对象上传
-    //     let formData = new FormData();
-    //     formData.append("image", fileObj.file);
-    //     formData.append("token", "Osfe9ngA4nKtZPza1");
-    //     formData.append("status", 1);
-    //     // 调用上传接口
-    //     await post(uploadImg, formData);
-    //     // 找到上传那个文件对应的预览图
-    //     this.thumbnail.find((item) => item.key == fileObj.key).isUpload = true;
-    //   }
-    // }, 200);
+    setInterval(async () => {
+      if (this.uploadFile.length > 0) {
+        // 取数组前面的第一个任务进行上传
+        let fileObj = this.uploadFile.shift(); 
+        // 用FormData对象上传
+        let formData = new FormData();
+        formData.append("image", fileObj.file);
+        formData.append("token", "Osfe9ngA4nKtZPza1");
+        formData.append("status", 1);
+        // 调用上传接口
+        await post(uploadImg, formData);
+        // 找到上传那个文件对应的预览图
+        this.thumbnail.find((item) => item.key == fileObj.key).isUpload = true;
+      }
+    }, 200);
   },
   methods: {
     /**
@@ -59,52 +56,52 @@ export default {
      * @method handlerChange
      * @param {Event事件对象} e
      */
-    // handlerChange(e) {
-    //   /**
-    //    * 若是多文件上传，在handlerChange事件里去遍历数组，逻辑跟单文件上传一样。
-    //    * 
-    //    */
-    //   // 一个标识key
-    //   this.key++;
-    //   // 上传的图片
-    //   let file = e.target.files[0];
-    //   // 获取缩略图
-    //   var reader = new FileReader();
-    //   reader.readAsDataURL(file);
-    //   reader.onloadend = () => {
-    //     this.thumbnail.push({
-    //       imgUrl: reader.result,
-    //       file,
-    //       isUpload: false,
-    //       key:this.key,
-    //     });
-    //     // 上传的图片
-    //     this.uploadFile.push({
-    //       imgUrl: reader.result,
-    //       file,
-    //       isUpload: false,
-    //       key:this.key,
-    //     });
-    //   };
-    //   // 上传同个文件触发change事件
-    //   e.target.value = "";
-    // },
-    // /**
-    //  * @description 将一个元素拖到目标区域并松下鼠标键
-    //  * @method drop 
-    //  */
-    // drop(){},
-    // /**
-    //  * @description 将一个元素拖到目标区域时
-    //  * @method dragenter
-    //  */
-    // dragenter(){},
-    // /**
-    //  * @description 将一个元素托离目标区域时
-    //  * @method  dragleave
-    //  */
-    // dragleave(){},
-    // dragover(){}
+    handlerChange(e) {
+      /**
+       * 若是多文件上传，在handlerChange事件里去遍历数组，逻辑跟单文件上传一样。
+       * 
+       */
+      // 一个标识key
+      this.key++;
+      // 上传的图片
+      let file = e.target.files[0];
+      // 获取缩略图
+      var reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onloadend = () => {
+        this.thumbnail.push({
+          imgUrl: reader.result,
+          file,
+          isUpload: false,
+          key:this.key,
+        });
+        // 上传的图片
+        this.uploadFile.push({
+          imgUrl: reader.result,
+          file,
+          isUpload: false,
+          key:this.key,
+        });
+      };
+      // 上传同个文件触发change事件
+      e.target.value = "";
+    },
+    /**
+     * @description 将一个元素拖到目标区域并松下鼠标键
+     * @method drop 
+     */
+    drop(){},
+    /**
+     * @description 将一个元素拖到目标区域时
+     * @method dragenter
+     */
+    dragenter(){},
+    /**
+     * @description 将一个元素托离目标区域时
+     * @method  dragleave
+     */
+    dragleave(){},
+    dragover(){}
   },
 };
 </script>

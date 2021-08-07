@@ -1,1 +1,1 @@
-export  const env="/test"; //开发环境
+export  const env="/test"; // 开发环境
