@@ -19,7 +19,7 @@
 
 <script>
 import { post } from "../utils/request";
-import { uploadImg,registry } from "../utils/api";
+import { uploadImg} from "../utils/api";
 export default {
   data() {
     return {
