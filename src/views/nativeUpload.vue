@@ -5,7 +5,7 @@
         <div class="img-container" v-show="thumbnail.length>0" v-for="(item,index) in thumbnail" :key="index">
           <img class="img" :src="item.imgUrl" alt="">
           <div class="shade" v-if="!item.isUpload">
-            <img class="loading-icon" src="../images/loading_icon.gif" alt="">
+            <img class="loading-icon" src="../assets/images/loading_icon.gif" alt="">
           </div>
         </div>
         <div class="upload-box" @drop="drop" @dragenter="dragenter" @dragleave="dragleave" @dragover="dragover">
@@ -171,7 +171,7 @@ export default {
         display: block;
         width: 50px;
         height: 50px;
-        background: url("../images/upload_icon.png") no-repeat center;
+        background: url("../assets/images/upload_icon.png") no-repeat center;
         background-size: 100% 100%;
         position: absolute;
         left: 50%;

@@ -1,7 +1,7 @@
 import axios from "./axios";
 /**
  * @description post请求
- * @params {String,Object对象} 请求路径 请求参数
+ * @param {String,Object对象} 请求路径 请求参数
  * @return {Promise对象} Promise对象
  */
 export function post (url, params = {}) {
@@ -16,7 +16,7 @@ export function post (url, params = {}) {
 
 /**
  * @description get请求
- * @params {String,Object对象} 请求路径  请求参数
+ * @param {String,Object对象} 请求路径  请求参数
  * @return {Promise对象} Promise对象
  */
 export function get (url, params = {}) {

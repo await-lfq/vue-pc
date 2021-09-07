@@ -6,36 +6,13 @@ let router = new VueRouter({
   routes: [{
       path: "/",
       redirect(){
-        return {name:"nativeUpload"}
+        return {name:"compress"}
       }
     },
     {
       name: "md5File",
       path: "/md5File",
-      component() {
-        return import("../views/md5")
-      }
-    },
-    {
-      name: "robot",
-      path: "/robot",
-      component() {
-        return import("../views/robot")
-      }
-    },
-    {
-      name: "upload",
-      path: "/upload",
-      component() {
-        return import("../views/upload")
-      }
-    },
-    {
-      name: "geyVerifyCode",
-      path: "/geyVerifyCode",
-      component() {
-        return import("../views/geyVerifyCode")
-      }
+      component:()=>  import("../views/md5")
     },
     {
       name: "waterfallsLayout",
@@ -47,23 +24,28 @@ let router = new VueRouter({
     {
       name: "scrollLoading",
       path: "/scrollLoading",
-      component() {
-        return import("../views/scrollLoading")
-      }
+      component:()=>import("../views/scrollLoading")
     },
     {
       name: "lazyLoading",
       path: "/lazyLoading",
-      component() {
-        return import("../views/lazyLoading")
-      }
+      component:()=>import("../views/lazyLoading")
     },
     {
       name:"nativeUpload",
       path:"/nativeUpload",
-      component(){
-        return import("../views/nativeUpload");
-      }
+      component:()=>import("../views/nativeUpload")
+      
+    },
+    {
+      name:"cropper",
+      path:"/cropper",
+      component:()=>import("../views/cropper")
+    },
+    {
+      name:"compress",
+      path:"/compress",
+      component:()=>import("../views/compress")
     }
   ]
 });

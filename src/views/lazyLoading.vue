@@ -1,100 +1,100 @@
 <template>
   <div class="lazy-loading">
     <div class="img-box">
-      <img src="../assets/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
+      <img src="../assets/images/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
     </div>
     <div class="img-box">
-      <img src="../assets/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
+      <img src="../assets/images/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
     </div>
     <div class="img-box">
-      <img src="../assets/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
+      <img src="../assets/images/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
     </div>
     <div class="img-box">
-      <img src="../assets/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
+      <img src="../assets/images/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
     </div>
     <div class="img-box">
-      <img src="../assets/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
+      <img src="../assets/images/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
     </div>
     <div class="img-box">
-      <img src="../assets/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
+      <img src="../assets/images/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
     </div>
     <div class="img-box">
-      <img src="../assets/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
+      <img src="../assets/images/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
     </div>
     <div class="img-box">
-      <img src="../assets/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
+      <img src="../assets/images/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
     </div>
     <div class="img-box">
-      <img src="../assets/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
+      <img src="../assets/images/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
     </div>
     <div class="img-box">
-      <img src="../assets/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
+      <img src="../assets/images/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
     </div>
     <div class="img-box">
-      <img src="../assets/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
+      <img src="../assets/images/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
     </div>
     <div class="img-box">
-      <img src="../assets/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
+      <img src="../assets/images/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
     </div>
     <div class="img-box">
-      <img src="../assets/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
+      <img src="../assets/images/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
     </div>
     <div class="img-box">
-      <img src="../assets/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
+      <img src="../assets/images/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
     </div>
     <div class="img-box">
-      <img src="../assets/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
+      <img src="../assets/images/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
     </div>
     <div class="img-box">
-      <img src="../assets/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
+      <img src="../assets/images/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
     </div>
     <div class="img-box">
-      <img src="../assets/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
+      <img src="../assets/images/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
     </div>
     <div class="img-box">
-      <img src="../assets/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
+      <img src="../assets/images/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
     </div>
     <div class="img-box">
-      <img src="../assets/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
+      <img src="../assets/images/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
     </div>
     <div class="img-box">
-      <img src="../assets/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
+      <img src="../assets/images/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
     </div>
     <div class="img-box">
-      <img src="../assets/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
+      <img src="../assets/images/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
     </div>
     <div class="img-box">
-      <img src="../assets/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
+      <img src="../assets/images/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
     </div>
     <div class="img-box">
-      <img src="../assets/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
+      <img src="../assets/images/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
     </div>
     <div class="img-box">
-      <img src="../assets/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
+      <img src="../assets/images/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
     </div>
     <div class="img-box">
-      <img src="../assets/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
+      <img src="../assets/images/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
     </div>
     <div class="img-box">
-      <img src="../assets/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
+      <img src="../assets/images/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
     </div>
     <div class="img-box">
-      <img src="../assets/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
+      <img src="../assets/images/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
     </div>
     <div class="img-box">
-      <img src="../assets/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
+      <img src="../assets/images/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
     </div>
     <div class="img-box">
-      <img src="../assets/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
+      <img src="../assets/images/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
     </div>
     <div class="img-box">
-      <img src="../assets/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
+      <img src="../assets/images/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
     </div>
     <div class="img-box">
-      <img src="../assets/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
+      <img src="../assets/images/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
     </div>
     <div class="img-box">
-      <img src="../assets/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
+      <img src="../assets/images/loading.gif" data-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=596930597,526197840&fm=26&gp=0.jpg" alt="">
     </div>
   </div>
 </template>

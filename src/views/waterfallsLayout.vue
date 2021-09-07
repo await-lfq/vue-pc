@@ -84,12 +84,9 @@
     box-sizing: border-box;
     column-count: 2;
     column-gap: 20px;
-
     .item {
       page-break-inside: avoid;
       margin-bottom: 10px;
     }
-
-
   }
 </style>
