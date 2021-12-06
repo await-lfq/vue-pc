@@ -20,7 +20,12 @@ export default {
      * @param {File对象} File对象
      */
     changeFile (file) {
-      this.compressImage(file.raw, 400, 400, "image/png")
+
+      this.compressImage(file.raw, 400, 400, "image/png").then(res => {
+        console.log(res,"文件对象");
+      }).catch(err => {
+        console.log(err);
+      })
     },
     /**
      * @description 压缩图片
@@ -35,13 +40,13 @@ export default {
         // 缩放图片需要的canvas
         const canvas = document.createElement('canvas');
         const context = canvas.getContext('2d');
-        // 读取图片对象
+        // 读取File对象
         fileReader.readAsDataURL(file);
-        // 读取文件对象完成之后的事件
-        fileReader.onloadend = function () {
+        // 读取文件成功
+        fileReader.onload = function () {
           img.src = fileReader.result;
         }
-        // 读取文件对象失败的事件
+        // 读取文件失败
         fileReader.onerror = function () {
           reject("读取文件失败");
         };
@@ -58,12 +63,12 @@ export default {
             // 用canvas进行缩放图片
             canvas.width = targetWidth; // canvas宽
             canvas.height = targetHeight; // canvas高
-            console.log(targetWidth, targetHeight);
             context.clearRect(0, 0, targetWidth, targetHeight);  // 清除画布
             context.drawImage(img, 0, 0, targetWidth, targetHeight); // 图片压缩
             // Blob对象转File对象
             canvas.toBlob((blobObj) => {
-              const fileObj = new File([blobObj], file.name, { type: blobObj.type, lastModifiedDate: Date.now() });
+              // 新文件对象
+              const fileObj = new File([blobObj], file.name, { type: blobObj.type, lastModified: Date.now() });
               resolve(fileObj)
             }, type);
           } else { // 不要压缩
@@ -74,10 +79,7 @@ export default {
         img.onerror = function () {
           reject("图片装载失败");
         }
-
       })
-
-
     },
   }
 

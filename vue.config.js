@@ -4,8 +4,8 @@ module.exports={
     proxy:{
       "/test":{
         // target:"https://event.kongquechao.com", // 上传图片的域名
-        // target:"https://m.maoyan.com", // 数据下拉加载列表 
-        target:"https://kqc.kongquechao.com", // 原生文件上传接口
+        // target:"https://m.maoyan.com", // 数据下拉加载列表的域名 
+        target:"https://kqc.kongquechao.com", // 原生文件上传的域名
         changeOrigin:true,
         pathRewrite:{
           "^/test":"/"

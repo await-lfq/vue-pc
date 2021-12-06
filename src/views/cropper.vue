@@ -21,7 +21,7 @@ export default {
      * @method changeImage
      */
     changeImage (file) {
-      this.$refs.cropper.changeCropperSize(file, [300, 300])
+      this.$refs.cropper.changeCropperSize(file, [1000, 1000])
     },
     /**
      * @descriotion 裁剪图片事件

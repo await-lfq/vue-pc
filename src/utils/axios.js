@@ -6,7 +6,7 @@ import { env } from "./env";
 // axios二次封装
 let serve = Vue.axios.create({
   baseURL: env,
-  timeout: 3000,
+  timeout: 9000,
   headers: { "Content-Type": "application/json;charset=utf-8" },
   responseType: "json",
   withCredentials: false,
