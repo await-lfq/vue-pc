@@ -5,7 +5,7 @@ let router = new VueRouter({
   mode: "history",
   routes: [{
     path: "/",
-    redirect: () =>({ name: "compress" })
+    redirect: () => ({ name: "pageCommunication" })
   },
   {
     name: "md5",
@@ -42,6 +42,16 @@ let router = new VueRouter({
     name: "compress",
     path: "/compress",
     component: () => import("../views/compress")
+  },
+  {
+    name: "pageCommunication",
+    path: "/pageCommunication",
+    component: () => import("../views/windowMessage/pageCommunication")
+  },
+  {
+    name: "pageCommunication2",
+    path: "/pageCommunication2",
+    component: () => import("../views/windowMessage/pageCommunication2")
   }
   ]
 });
