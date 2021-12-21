@@ -5,7 +5,7 @@ let router = new VueRouter({
   mode: "history",
   routes: [{
     path: "/",
-    redirect: () => ({ name: "pageCommunication" })
+    redirect: () => ({ name: "drag" })
   },
   {
     name: "md5",
@@ -52,6 +52,11 @@ let router = new VueRouter({
     name: "pageCommunication2",
     path: "/pageCommunication2",
     component: () => import("../views/windowMessage/pageCommunication2")
+  },
+  {
+    name: "drag",
+    path: "/drag",
+    component: () => import("../views/drag")
   }
   ]
 });

@@ -1,4 +1,5 @@
 module.exports={
+  lintOnSave: false, // 关闭严格模式
   devServer:{ // 开发环境，配置跨域
     open:true,
     proxy:{
