@@ -13,11 +13,6 @@ let router = new VueRouter({
     component: () => import("../views/md5")
   },
   {
-    name: "waterfallsLayout",
-    path: "/waterfallsLayout",
-    component: () => import("../views/waterfallsLayout")
-  },
-  {
     name: "scrollLoading",
     path: "/scrollLoading",
     component: () => import("../views/scrollLoading")

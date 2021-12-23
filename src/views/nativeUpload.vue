@@ -57,10 +57,6 @@ export default {
      * @param {Event事件对象} e
      */
     handlerChange(e) {
-      /**
-       * 若是多文件上传，在handlerChange事件里去遍历数组，逻辑跟单文件上传一样。
-       * 
-       */
       // 一个标识key
       this.key++;
       // 上传的图片
