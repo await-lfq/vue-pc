@@ -5,12 +5,22 @@ let router = new VueRouter({
   mode: "history",
   routes: [{
     path: "/",
-    redirect: () => ({ name: "drag" })
+    redirect: () => ({ name: "elementUpload" })
+  },
+  {
+    name:"elementUpload",
+    path:"/elementUpload",
+    component:()=>import("../views/elementUpload")
   },
   {
     name: "md5",
     path: "/md5",
     component: () => import("../views/md5")
+  },
+  {
+    name: "waterfallsLayout",
+    path: "/waterfallsLayout",
+    component: () => import("../views/waterfallsLayout")
   },
   {
     name: "scrollLoading",
@@ -37,16 +47,6 @@ let router = new VueRouter({
     name: "compress",
     path: "/compress",
     component: () => import("../views/compress")
-  },
-  {
-    name: "pageCommunication",
-    path: "/pageCommunication",
-    component: () => import("../views/windowMessage/pageCommunication")
-  },
-  {
-    name: "pageCommunication2",
-    path: "/pageCommunication2",
-    component: () => import("../views/windowMessage/pageCommunication2")
   },
   {
     name: "drag",
