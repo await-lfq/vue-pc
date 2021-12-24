@@ -1,60 +1,62 @@
 <template>
   <div>
     <!-- 图片列表展示 -->
-    <img v-for="item in imgList" :src="item.src" :key="item.id" alt="">
+    <div class="img-box">
+      <img v-for="item in imgList" :src="item.src" :key="item.id" alt="">
+    </div>
     <!-- 上传组件 -->
-    <el-upload :on-change="changeImage"  :on-success="uploadSuccess" :auto-upload="true"   :data="fileData" :action="requestUrl" accept="image/*" list-type="picture-card" :on-preview="handlePictureCardPreview" :on-remove="handleRemove">
+    <el-upload :on-error="uploadError" :multiple="multiple" :on-change="changeImage" :show-file-list="false" :on-success="uploadSuccess" :auto-upload="true" :data="fileData" :action="requestUrl" accept="image/*" list-type="picture-card">
       <i class="el-icon-plus"></i>
     </el-upload>
-    <el-dialog :visible.sync="dialogVisible">
-      <img width="100%" :src="dialogImageUrl" alt="">
-    </el-dialog>
   </div>
 </template>
 
 <script>
 export default {
-  props:{
+  props: {
     // 请求路径
-    requestUrl:{
-      type:String,
+    requestUrl: {
+      type: String,
+      required: true,
+    },
+    // 上传图片类型
+    type: {
+      type: String,
+      required: true,
+    },
+    // 是否支持多图片上传
+    multiple: {
+      type: Boolean,
+      default: false,
     }
   },
   data () {
     return {
-      // 遮罩层上面的图片路径
-      dialogImageUrl: '',
-      // 是否显示遮罩
-      dialogVisible: false,
       // 上传图片附带的参数
       fileData: {},
-      // 存放的图片列表  
-      imgList:[],
+      // 存放图片列表  
+      imgList: [],
     }
   },
   methods: {
-    // 删除上传的图片
-    handleRemove (file, fileList) {
-      console.log(file, fileList);
-    },
-    // 点击上传的图片
-    handlePictureCardPreview (file) {
-      this.dialogImageUrl = file.url;
-      this.dialogVisible = true;
-    },
     // 选择图片上传
     changeImage (file) {
       this.fileData = {
-        type:"studio",
+        type: this.type,
         image: file.raw,
         token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wva3FjLmtvbmdxdWVjaGFvLmNvbSIsIm5iZiI6MTY0MDMxNDkyOCwiaWF0IjoxNjQwMzE0OTI4LCJqdGkiOnsidWlkIjoxMzAxLCJ1c2VybmFtZSI6bnVsbCwic2lkIjoxMzMzLCJzdHVkaW9fbmFtZSI6InpjdGVzdDEiLCJwaG9uZSI6IjE1Njk3NjM2NDc1IiwibG9nbyI6Imh0dHBzOlwvXC9pbWcua29uZ3F1ZWNoYW8uY29tXC9wdWJsaWNcL3N0YXRpY1wvc3R1ZGlvX2xvZ29cL21pbmlcLzIwMjExMDE1XC8yMDIxMTAxNTEyMDAzNjMzMjEucG5nIn19.rS2jNFj5ERdBvYtCbtNfWDDndhkFrdUr83Ihrj1i30Syk1c0OFfz73bRt4gnsd7gs5CSiemfSVRV8l3ttXt74OA68Y4A76i-btfdimTYQ2U13Prm4h_W0mvhiYPj1Btxl4oVjEvjzmmX_Y70RHLY6p1-Jv0trCnTbWryZsUdIpY"
       }
     },
     // 上传成功
-    uploadSuccess(response){
+    uploadSuccess (response) {
       // 把图片放到imgList，再发请求
       console.log(response);
+    },
+    // 上传失败
+    uploadError (err) {
+      console.log(err);
     }
+
   }
 
 }
