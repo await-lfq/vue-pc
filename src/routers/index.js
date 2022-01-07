@@ -2,10 +2,15 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 Vue.use(VueRouter);
 let router = new VueRouter({
-  mode: "history",
+  mode: "hash",
   routes: [{
     path: "/",
-    redirect: () => ({ name: "elementUpload" })
+    redirect: () => ({ name: "fileUpload" })
+  },
+  {
+    name:"fileUpload",
+    component:()=>import("../views/fileUpload"),
+    path:"/fileUpload"
   },
   {
     name:"elementUpload",
