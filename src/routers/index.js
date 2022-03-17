@@ -5,17 +5,17 @@ let router = new VueRouter({
   mode: "hash",
   routes: [{
     path: "/",
-    redirect: () => ({ name: "fileUpload" })
+    redirect: () => ({ name: "modal" })
   },
   {
-    name:"fileUpload",
-    component:()=>import("../views/fileUpload"),
-    path:"/fileUpload"
+    name: "fileUpload",
+    component: () => import("../views/fileUpload"),
+    path: "/fileUpload"
   },
   {
-    name:"elementUpload",
-    path:"/elementUpload",
-    component:()=>import("../views/elementUpload")
+    name: "elementUpload",
+    path: "/elementUpload",
+    component: () => import("../views/elementUpload")
   },
   {
     name: "md5",
@@ -57,6 +57,10 @@ let router = new VueRouter({
     name: "drag",
     path: "/drag",
     component: () => import("../views/drag")
+  },{
+    name:"modal",
+    path:"/modal",
+    component:()=>import("../views/modal")
   }
   ]
 });
