@@ -5,7 +5,7 @@ let router = new VueRouter({
   mode: "hash",
   routes: [{
     path: "/",
-    redirect: () => ({ name: "imgLazy" })
+    redirect: () => ({ name: "alert" })
   },
   {
     name: "fileUpload",
@@ -59,8 +59,13 @@ let router = new VueRouter({
   },
   {
     name: "imgLazy",
-    path:"/imgLazy",
-    component:()=>import("../views/imgLazy")
+    path: "/imgLazy",
+    component: () => import("../views/imgLazy")
+  },
+  {
+    name: "alert",
+    path: "/alert",
+    component: () => import("../views/alert.vue"),
   }
   ]
 });

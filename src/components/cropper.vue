@@ -3,26 +3,7 @@
     <el-dialog title="图片剪裁" :visible.sync="dialogVisible" append-to-body>
       <div class="cropper-content">
         <div class="tips">滑动鼠标滚轮可放大缩小图片！</div>
-        <Vue-cropper 
-          style="height:300px" 
-          ref="cropper" 
-          :fixedNumber="option.fixedNumber" 
-          :img="option.img" 
-          :info="option.info" 
-          :outputSize="option.size" 
-          :outputType="option.outputType" 
-          :canScale="option.canScale"
-          :full="option.full" 
-          :canMove="option.canMove"  
-          :canMoveBox="option.canMoveBox" 
-          :original="option.original" 
-          :autoCrop="option.autoCrop" 
-          :fixed="option.fixed" 
-          :centerBox="option.centerBox" 
-          :infoTrue="option.infoTrue" 
-          :fixedBox="option.fixedBox" 
-          :enlarge="option.enlarge"
-        >
+        <Vue-cropper style="height:300px" ref="cropper" :fixedNumber="option.fixedNumber" :img="option.img" :info="option.info" :outputSize="option.size" :outputType="option.outputType" :canScale="option.canScale" :full="option.full" :canMove="option.canMove" :canMoveBox="option.canMoveBox" :original="option.original" :autoCrop="option.autoCrop" :fixed="option.fixed" :centerBox="option.centerBox" :infoTrue="option.infoTrue" :fixedBox="option.fixedBox" :enlarge="option.enlarge">
         </Vue-cropper>
       </div>
       <div slot="footer" class="dialog-footer">
@@ -34,7 +15,7 @@
 </template>
 
 <script>
-import {VueCropper}  from "vue-cropper"
+import { VueCropper } from "vue-cropper"
 export default {
   data () {
     return {
@@ -55,7 +36,7 @@ export default {
         centerBox: false, // 截图框是否被限制在图片里面
         infoTrue: false, // true为展示真实输出图片宽高，false展示看到的截图框宽高
         enlarge: 1, // 图片根据截图框输出比例倍数(0-max，建议不要太大不然会卡死的呢)
-        canMove:true // 上传图片是否可以移动
+        canMove: true // 上传图片是否可以移动
       },
       fileName: '', // 文件名称
       dialogVisible: false, // 是否显示Dialog 
@@ -80,7 +61,7 @@ export default {
      * @description 裁剪动作
      * @method cropperAction
      */
-    cropperAction() {
+    cropperAction () {
       this.$refs.cropper.getCropBlob((data) => {
         this.$emit("cropperImg", {
           file: data,
