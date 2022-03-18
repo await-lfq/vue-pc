@@ -5,7 +5,7 @@ let router = new VueRouter({
   mode: "hash",
   routes: [{
     path: "/",
-    redirect: () => ({ name: "modal" })
+    redirect: () => ({ name: "imgLazy" })
   },
   {
     name: "fileUpload",
@@ -33,11 +33,6 @@ let router = new VueRouter({
     component: () => import("../views/scrollLoading")
   },
   {
-    name: "lazyLoading",
-    path: "/lazyLoading",
-    component: () => import("../views/lazyLoading")
-  },
-  {
     name: "nativeUpload",
     path: "/nativeUpload",
     component: () => import("../views/nativeUpload")
@@ -57,10 +52,15 @@ let router = new VueRouter({
     name: "drag",
     path: "/drag",
     component: () => import("../views/drag")
-  },{
-    name:"modal",
-    path:"/modal",
-    component:()=>import("../views/modal")
+  }, {
+    name: "modal",
+    path: "/modal",
+    component: () => import("../views/modal")
+  },
+  {
+    name: "imgLazy",
+    path:"/imgLazy",
+    component:()=>import("../views/imgLazy")
   }
   ]
 });
