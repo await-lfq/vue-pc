@@ -6,10 +6,11 @@
 
 <script>
 export default {
+  
   methods: {
     showAlert () {
-      this.$alert("这是一个弹窗");
-    }
+      this.$alert("不要一直点我");
+    },
   },
 }
 </script>

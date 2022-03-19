@@ -1,6 +1,7 @@
 import Vue from "vue";
 import alert from "./alert.vue"; // 引入alert组件
 const AlertConstructor = Vue.extend(alert); // 创建AlertConstructor构造器
+let timer; // 定时器
 /**
  * @description toast弹窗
  * @param {string} 显示的内容
@@ -16,16 +17,22 @@ function showToast (text, duration = 1000) {
       }
     },
   });
-  document.body.appendChild(alertInstance.$el); // 挂载节点
-  setTimeout(() => { // 显示隐藏
-    alertInstance.show = true;
+  // 防抖处理
+  if (timer) {
+    clearTimeout(timer);
+  }
+  timer = setTimeout(() => {
+    document.body.appendChild(alertInstance.$el); // 挂载节点
     setTimeout(() => {
-      alertInstance.show = false;
+      alertInstance.show = true; // 显示节点
       setTimeout(() => {
-        document.body.removeChild(alertInstance.$el);
-      }, 1000)
-    }, duration)
-  }, duration);
+        alertInstance.show = false; // 隐藏节点
+        setTimeout(() => {
+          document.body.removeChild(alertInstance.$el); // 删除节点
+        }, 1000)
+      }, duration)
+    }, duration);
+  }, 300)
 }
 /**
  * @description 注册一个toast弹窗
